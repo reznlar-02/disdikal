@@ -13,7 +13,7 @@ class KunjunganModel extends Model
 
     protected $fillable = [
         'nama',
-        'nrp',
+        'angkatan',
         'email',
         'idpendidikan',
         'created_at',

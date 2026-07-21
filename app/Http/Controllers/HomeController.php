@@ -88,7 +88,7 @@ class HomeController extends Controller
     {
         $validated = $request->validate([
             'nama' => ['required', 'string', 'max:255'],
-            'nrp' => ['required', 'string', 'max:100'],
+            'angkatan' => ['required', 'string', 'max:100'],
             'email' => ['required', 'email:rfc,dns', 'max:255', 'unique:kunjungan,email'],
             'idpendidikan' => ['required', 'integer', 'exists:pendidikan,idpendidikan'],
             'cf-turnstile-response' => ['required', new Turnstile($request->ip())],
@@ -130,7 +130,7 @@ class HomeController extends Controller
 
                 KunjunganModel::create([
                     'nama' => $validated['nama'],
-                    'nrp' => $validated['nrp'],
+                    'angkatan' => $validated['angkatan'],
                     'email' => $validated['email'],
                     'idpendidikan' => $validated['idpendidikan'],
                 ]);

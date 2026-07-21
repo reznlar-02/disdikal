@@ -84,8 +84,8 @@
                             <input type="text" class="form-control" name="nama" id="nama" required>
                         </div>
                         <div class="mb-3">
-                            <label for="nrp" class="form-label">NRP:</label>
-                            <input type="text" class="form-control" name="nrp" id="nrp" required>
+                            <label for="angkatan" class="form-label">Angkatan:</label>
+                            <input type="text" class="form-control" name="angkatan" id="angkatan" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email:</label>
