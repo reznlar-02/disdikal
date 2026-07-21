@@ -1,0 +1,7 @@
+# Konfigurasi build untuk Railway (Nixpacks).
+# Migration + cache dijalankan sekali di awal startup setiap deploy, baru
+# server Laravel bawaan menyala. Cukup untuk uji coba; untuk trafik lebih
+# besar nanti ganti ke php-fpm + nginx atau octane.
+
+[start]
+cmd = "php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan serve --host 0.0.0.0 --port $PORT"
